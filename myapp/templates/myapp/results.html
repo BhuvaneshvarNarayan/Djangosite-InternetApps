@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Search Results - eBook App{% endblock %}
+
+{% block body_block %}
+    <p>Hello {{ name }}</p>
+    {% if category %}
+        <p>Books in the "{{ category }}" category with a price up to ${{ max_price }}:</p>
+    {% else %}
+        <p>Books with a price up to ${{ max_price }}:</p>
+    {% endif %}
+    {% if booklist %}
+        <ul>
+            {% for book in booklist %}
+                <li>{{ book.title }} - ${{ book.price }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No books available in the selected category and price range.</p>
+    {% endif %}
+{% endblock %}

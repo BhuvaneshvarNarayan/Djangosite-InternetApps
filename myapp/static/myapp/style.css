@@ -1,0 +1,20 @@
+/* Default styles */
+body {
+    background-color: #f0f0f0; /* Example background color */
+    color: #333; /* Example text color */
+    font-size: 16px; /* Example font size */
+}
+
+/* Styles for <h1> tags */
+h1 {
+    font-size: 24px; /* Example font size for h1 */
+    color: #444; /* Example color for h1 */
+    font-style: italic; /* Example font style for h1 */
+    position: relative; /* Example position for h1 */
+}
+
+/* Class definition */
+.hbar1 {
+    display: inline;
+    margin: 15px;
+}
