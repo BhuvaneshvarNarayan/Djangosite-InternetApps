@@ -2,22 +2,36 @@
 {% load static %}
 
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}" />
-        <title>eBook APP - {% block title %}Welcome!{% endblock %}</title>
-    </head>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}" />
+    <title>eBook APP - {% block title %}Welcome!{% endblock %}</title>
+</head>
 
-    <body>
-        <div>
-            <h1>{% block myhdg %}Hello Bhuvaneshvar Narayan {% endblock %}</h1>
-            {% block body_block %}*** {% endblock %}
-        </div>
-        <hr />
-        <div>
-            <ul>
-                <li class="hbar1"><a href="/myapp/about/">Find out about this site</a></li>
-                <li class="hbar1"><a href = "{% url 'myapp:index' %}">Click here to return to main page</a><br/></li>
-            </ul>
-        </div>
-    </body>
+<body>
+    <header>
+        <h1>{% block myhdg %}Hello Bhuvaneshvar Narayan{% endblock %}</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="{% url 'myapp:about' %}">Find out about this site</a></li>
+            <li><a href="{% url 'myapp:index' %}">Main Page</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'myapp:logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'myapp:login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <main>
+            {% block body_block %}***{% endblock %}
+        </main>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 eBook App</p>
+    </footer>
+</body>
 </html>

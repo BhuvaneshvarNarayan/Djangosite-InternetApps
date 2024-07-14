@@ -6,7 +6,9 @@ class FeedbackForm(forms.Form):
         ('B', 'Borrow'),
         ('P', 'Purchase'),
     ]
-    feedback = forms.ChoiceField(choices=FEEDBACK_CHOICES)
+    feedback = forms.MultipleChoiceField(choices=FEEDBACK_CHOICES,
+                                         widget=forms.CheckboxSelectMultiple(),
+                                         label= 'Select all that apply: ')
 
 class SearchForm(forms.Form):
     name = forms.CharField(max_length=100, required=False, label='Your Name')

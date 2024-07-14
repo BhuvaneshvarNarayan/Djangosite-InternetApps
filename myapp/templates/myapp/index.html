@@ -1,6 +1,7 @@
 {% extends 'myapp/base.html' %}
 
 {% block body_block %}
+    <p>Last login: {{ last_login }}</p>
         {% if booklist %}
         <h2>List of Books</h2>
         <ol>

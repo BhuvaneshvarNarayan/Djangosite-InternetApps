@@ -1,20 +1,155 @@
 /* Default styles */
 body {
-    background-color: #f0f0f0; /* Example background color */
-    color: #333; /* Example text color */
-    font-size: 16px; /* Example font size */
+    background-color: #f0f0f0; /* Light gray background color */
+    color: #333; /* Dark gray text color */
+    font-family: Arial, sans-serif; /* Example font family */
+    font-size: 16px; /* Base font size */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improve readability */
 }
 
 /* Styles for <h1> tags */
 h1 {
-    font-size: 24px; /* Example font size for h1 */
-    color: #444; /* Example color for h1 */
-    font-style: italic; /* Example font style for h1 */
-    position: relative; /* Example position for h1 */
+    font-size: 32px; /* Larger font size for h1 */
+    color: #ffffff; /* White color for h1 */
+    font-style: italic; /* Italic style for h1 */
+    text-align: center; /* Center align for h1 */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Navigation bar */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333; /* Dark background for navbar */
+    margin: 0;
+}
+
+li {
+    display: inline;
+    margin: 0 15px;
+}
+
+a {
+    color: #007BFF; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+    color: #ffffff; /* White text color on hover */
+    border-radius: 4px; /* Rounded corners */
 }
 
 /* Class definition */
 .hbar1 {
     display: inline;
     margin: 15px;
+    color: #ffffff; /* White text color for nav links */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #ffffff; /* White text color for footer */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Additional styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff; /* White background for forms */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #ffffff; /* White text color for submit button */
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+p {
+    margin: 20px 0;
+}
+
+strong {
+    color: #007BFF;
+}
+
+/* Header and navigation styles */
+header {
+    background-color: #007BFF;
+    color: #ffffff; /* White text color for header */
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff; /* White text color for nav links */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Content area styles */
+main {
+    padding: 20px;
+    background-color: #ffffff; /* White background for main content */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
