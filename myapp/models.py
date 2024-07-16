@@ -47,6 +47,9 @@ class Member(User):
     auto_renew = models.BooleanField(default=True)
     borrowed_books = models.ManyToManyField(Book, blank=True)
 
+    class Meta:
+        verbose_name = 'Member'
+
     def __str__(self):
         return self.username
 
